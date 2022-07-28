@@ -9,16 +9,16 @@ The following analysis presents documentation of an Extract-Transform-Load proce
 ### Transforming the Data
 Using python and Jupyter notebooks, the above data was inspected and cleaned.  A variety of operations were performed to make sure that the data being utilized in the final dataset was relevant and useful for the Hackathon database requested by the client. Among the many procedures performed were the following: 
 * To clean the Wikipedia dataset: 
-- Used list comprehension to filter out data in columns unrelated to movies.
-- Created a function clean_movie() to clean the data by changing column names.
-- Developed a code that isolated a unique movie ID from a web url.
-- Converted and parsed data using regular expression matches to homogenize data types.
+    - Used list comprehension to filter out data in columns unrelated to movies.
+    - Created a function clean_movie() to clean the data by changing column names.
+    - Developed a code that isolated a unique movie ID from a web url.
+    - Converted and parsed data using regular expression matches to homogenize data types.
 
 * To clean the Kaggle meta_data dataset:
-- Identified 6 columns that needed to be converted into a different data type from what was originally provided and converted them.
+    - Identified 6 columns that needed to be converted into a different data type from what was originally provided and converted them.
 
 * To clean the MovieLens rating dataset:
-- The ratings info was consolidated by converting the data types in the "timestamp" column to a timestamp data type.
+    - The ratings info was consolidated by converting the data types in the "timestamp" column to a timestamp data type.
 
 ### Loading the Data
 Once the data from the 3 sources was cleaned, it was merged into a dataframe and imported into a table in postgres, where it can be easily queried using SQL.
